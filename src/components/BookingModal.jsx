@@ -1,27 +1,12 @@
-import { useEffect, useRef, useState } from 'react';
-
-const cleanPhone = (phone) => phone.replace(/\D/g, '').replace(/^0/, '63');
+import { useEffect, useRef } from 'react';
 
 export function contactLinks(config) {
-  const international = cleanPhone(config.phone);
-  const wa = cleanPhone(config.whatsappNumber || config.phone);
-  const viber = cleanPhone(config.viberNumber || config.phone);
-  const message = encodeURIComponent(config.bookingMessage);
-  const telegram = config.telegramUsername
-    ? `https://t.me/${config.telegramUsername.replace(/^@/, '')}`
-    : `tg://resolve?phone=${international}`;
   return [
-    { label: 'WhatsApp', detail: 'Start a chat', href: `https://wa.me/${wa}?text=${message}` },
-    { label: 'Viber', detail: 'Open Viber', href: `viber://chat?number=%2B${viber}` },
-    { label: 'Telegram', detail: config.telegramUsername ? 'Start a chat' : 'Open by phone number', href: telegram },
-    { label: 'Call', detail: config.phone, href: `tel:+${international}` },
-    { label: 'Text / iMessage', detail: config.phone, href: `sms:+${international}` },
     { label: 'Instagram', detail: `@${config.instagram}`, href: `https://instagram.com/${config.instagram}` },
   ];
 }
 
 export default function BookingModal({ open, onClose, config }) {
-  const [copied, setCopied] = useState(false);
   const closeRef = useRef(null);
   const priorFocus = useRef(null);
   const gloveFee = new Intl.NumberFormat('en-PH', { style: 'currency', currency: config.currency, maximumFractionDigits: 0 }).format(config.gloveFee);
@@ -59,11 +44,7 @@ export default function BookingModal({ open, onClose, config }) {
           <strong>{item.label}</strong><span>{item.detail}</span><b aria-hidden="true">↗</b>
         </a>)}
       </div>
-      <button className="copy-number" onClick={async () => {
-        try { await navigator.clipboard.writeText(config.phone); setCopied(true); setTimeout(() => setCopied(false), 2500); }
-        catch { setCopied(false); }
-      }}>{copied ? 'NUMBER COPIED ✓' : `COPY NUMBER  /  ${config.phone}`}</button>
-      <small>Some apps must be installed on your device to open their links. If a link does not open, copy the number above.</small>
+      <small>Instagram opens in a new tab. Send your preferred training time and experience level.</small>
     </div>
   </div>;
 }
