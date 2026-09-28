@@ -26,7 +26,6 @@ Most copy and business details live in `src/config/siteConfig.js`. Save the file
 | --- | --- |
 | Rate | `price: 500` in `siteConfig.js`; prices in the hero, card, booking CTA, FAQ and mobile CTA update together |
 | Optional gloves charge | `gloveFee: 100` in `siteConfig.js`; the pricing note and gloves FAQ update together |
-| Phone number | `phone` in `siteConfig.js`; WhatsApp, Viber, Telegram by phone, call and SMS links use it unless an override is provided |
 | Instagram | `instagram` in `siteConfig.js`, without `@` |
 | Booking text | `bookingMessage` in `siteConfig.js` |
 | Location or duration | `location`, `duration`, `durationNote` in `siteConfig.js` |
@@ -34,7 +33,7 @@ Most copy and business details live in `src/config/siteConfig.js`. Save the file
 | Glove availability | Edit `equipmentAnswer` in `siteConfig.js`; `{gloveFee}` inserts the configured charge |
 | Experience/bio | Fill `coachBio` with accurate information |
 
-Phone links use Philippine international format (`0956…` becomes `63956…`). Telegram's phone-based app link can depend on the visitor's device and privacy settings; set `telegramUsername` if you have a public username. The booking sheet always offers a copy-number fallback. WhatsApp and Viber can use separate numbers through `whatsappNumber` and `viberNumber`.
+The booking sheet links to Instagram. Update the public Instagram handle in `siteConfig.js` if needed.
 
 ### Replace the hero and training photos
 
