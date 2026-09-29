@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://norrisgabrielfontanilla-cell.github.io/grassbox/sitemap.xml

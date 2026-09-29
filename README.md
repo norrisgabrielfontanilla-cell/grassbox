@@ -27,13 +27,12 @@ Most copy and business details live in `src/config/siteConfig.js`. Save the file
 | Rate | `price: 500` in `siteConfig.js`; prices in the hero, card, booking CTA, FAQ and mobile CTA update together |
 | Optional gloves charge | `gloveFee: 100` in `siteConfig.js`; the pricing note and gloves FAQ update together |
 | Instagram | `instagram` in `siteConfig.js`, without `@` |
-| Booking text | `bookingMessage` in `siteConfig.js` |
 | Location or duration | `location`, `duration`, `durationNote` in `siteConfig.js` |
 | Training and hero copy | `hero`, `intro`, `training`, `privateTraining`, `philosophy`, `faq` in `siteConfig.js` |
 | Glove availability | Edit `equipmentAnswer` in `siteConfig.js`; `{gloveFee}` inserts the configured charge |
 | Experience/bio | Fill `coachBio` with accurate information |
 
-The booking sheet links to Instagram. Update the public Instagram handle in `siteConfig.js` if needed.
+Every booking button opens Instagram directly. Update the public Instagram handle in `siteConfig.js` if needed.
 
 ### Replace the hero and training photos
 
@@ -107,7 +106,7 @@ Import the GitHub repository. Use build command `npm run build` and output direc
 
 ## SEO and final launch checks
 
-`index.html` includes the title, description, viewport, Open Graph placeholders and favicon. Replace `public/social-preview.svg` with a real share image and use its absolute public URL in `og:image` after choosing your domain. Update the title and description in `index.html` if you change the brand or location. Google Fonts is used for typography; it needs a network connection. Check the actual device behavior of Viber, Telegram, WhatsApp and SMS after publishing, since installed apps and privacy settings differ.
+`index.html` contains the title, description, canonical URL, Open Graph image and structured service data. `public/robots.txt` and `public/sitemap.xml` point to the GitHub Pages URL. Update all absolute URLs if the domain changes. Search Console property verification and sitemap submission require access to the site owner’s Google account. Google Fonts needs a network connection. For optional GA4 measurement, set `VITE_GA_MEASUREMENT_ID=G-XXXXXXXXXX` in the build environment; booking button clicks then emit `booking_click` with a `location` value. No analytics loads without that ID.
 
 ## Structure
 
@@ -119,7 +118,7 @@ grass-boxing/
 │   ├── assets/images/       bundled editorial images
 │   ├── assets/clients/      real client photos you add
 │   ├── assets/gallery/      real training photos you add
-│   ├── components/          navigation, contact sheet, testimonials, gallery
+│   ├── components/          navigation, QR code, testimonials, gallery
 │   ├── config/siteConfig.js  main content and contact settings
 │   ├── data/                testimonial and gallery entries
 │   ├── styles/main.css       responsive visual system

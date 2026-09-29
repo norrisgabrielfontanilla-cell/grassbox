@@ -11,14 +11,14 @@ export const siteConfig = {
   price: 500,
   gloveFee: 100,
   currency: 'PHP',
-  duration: '60+ MINUTES',
-  durationNote: 'Sessions are generally around one hour and may extend depending on the training plan and client.',
+  duration: 'AROUND 60 MINUTES',
+  durationNote: 'Plan for about an hour. Some sessions may run up to 90 minutes depending on the training plan and client.',
   instagram: 'norris_fontanilla',
   bookingMessage: 'Hi Norris, I would like to book a private boxing session at Grass Residences.',
   hero: {
     eyebrow: 'PRIVATE BOXING TRAINING  /  QUEZON CITY',
     headline: ['GRASS', 'BOXING'],
-    subtitle: 'Real boxing skills. One-on-one attention.',
+    subtitle: 'Private boxing coaching, built around you.',
     image: heroImage,
   },
   images: {
@@ -27,7 +27,7 @@ export const siteConfig = {
   },
   intro: {
     title: 'BOXING IS MORE THAN THROWING PUNCHES.',
-    body: 'Learn movement, defense, timing, footwork and fight-specific situations through focused one-on-one coaching.',
+    body: 'Work directly with Norris on the skills you need: proper technique, mitt work, footwork, defense and the decisions behind each move.',
   },
   training: [
     { title: 'FUNDAMENTALS', description: 'Stance, balance, guard, punching mechanics and proper technique.' },
@@ -37,16 +37,18 @@ export const siteConfig = {
     { title: 'FIGHT SITUATIONS', description: 'Apply techniques in realistic situations, with a reason behind every move.' },
     { title: 'CONDITIONING', description: 'Boxing-specific conditioning adjusted to your fitness and experience.' },
   ],
-  privateTraining: 'Every session is adjusted to your experience, fitness level, weaknesses and goals. One coach, one client, focused work.',
+  privateTraining: 'The session is yours. Norris adjusts the work to your experience, fitness level and goals, then gives you direct corrections as you train.',
   philosophy: 'Mitt work should feel connected to the fight: when to attack, when to defend, where to move and how to create the next opening.',
-  coachBio: '', // Add your own verified experience and philosophy here.
+  coachBio: 'As an amateur boxer, Norris teaches the movement and decisions behind the punches. His mitt work mimics an opponent so you can practice when to attack, defend, move and create an opening.',
   equipmentAnswer: 'Bring your own gloves if you have them. If you do not have gloves yet, a pair is available for an additional {gloveFee}.',
   faq: [
     { question: 'Do I need boxing experience?', answer: 'No. Beginners are welcome.' },
-    { question: 'How long is one session?', answer: 'Sessions are normally around 60 minutes and may extend depending on the training program and client.' },
+    { question: 'How long is one session?', answer: 'Plan for about 60 minutes. Some sessions may run up to 90 minutes depending on the training plan and client.' },
     { question: 'How much is a session?', answer: '{price} for a private boxing session.' },
     { question: 'Where is training held?', answer: 'Grass Residences, Quezon City.' },
+    { question: 'What should I bring?', answer: 'Wear comfortable training clothes and bring water. Bring your own boxing gloves if you have them, or use a pair for an additional {gloveFee}.' },
+    { question: 'When can I train?', answer: 'Message Norris on Instagram with your preferred day and time. Availability and the exact meeting point at Grass Residences are confirmed before your session.' },
     { question: 'Can I train for fitness even if I do not plan to fight?', answer: 'Yes. Sessions can be adjusted around fitness while still teaching proper boxing technique.' },
-    { question: 'How do I book?', answer: 'Send Norris a message on Instagram to arrange a session.' },
+    { question: 'How do I book?', answer: 'Message @norris_fontanilla on Instagram with your preferred day, experience level and whether you need gloves.' },
   ],
 };
