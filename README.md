@@ -20,11 +20,11 @@ npm run preview
 
 ## Edit the site
 
-Most copy and business details live in `src/config/siteConfig.js`. Save the file and Vite will reload the page.
+Business details and FAQs live in `src/config/siteConfig.js`. Main section copy and the three training goal tabs live in `src/App.jsx`; the session planner is in `src/components/SessionPlanner.jsx`. Save a file and Vite will reload the page.
 
 | Change | Where |
 | --- | --- |
-| Rate | `price: 500` in `siteConfig.js`; prices in the hero, card, booking CTA, FAQ and mobile CTA update together |
+| Rate | `price: 500` in `siteConfig.js`; prices in the hero, offer, planner and FAQ update together |
 | Optional gloves charge | `gloveFee: 100` in `siteConfig.js`; the pricing note and gloves FAQ update together |
 | Instagram | `instagram` in `siteConfig.js`, without `@` |
 | Location or duration | `location`, `duration`, `durationNote` in `siteConfig.js` |
@@ -32,7 +32,7 @@ Most copy and business details live in `src/config/siteConfig.js`. Save the file
 | Glove availability | Edit `equipmentAnswer` in `siteConfig.js`; `{gloveFee}` inserts the configured charge |
 | Experience/bio | Fill `coachBio` with accurate information |
 
-Every booking button opens Instagram directly. Update the public Instagram handle in `siteConfig.js` if needed.
+Booking buttons take visitors to the session planner. Visitors choose experience, optional glove use and a preferred time, then copy the generated request and send it to Norris on Instagram. The planner shows the full total and does not reserve a time automatically. Update the public Instagram handle in `siteConfig.js` if needed.
 
 ### Replace the hero and training photos
 
@@ -98,7 +98,7 @@ In the repository settings, open **Pages**, set **Build and deployment → Sourc
 
 ## Website QR code
 
-The contact section automatically creates a QR code for the site's deployed homepage and includes a **Download QR** link for a PNG you can use on flyers. Open the **live deployed site** and download it there; a QR downloaded from local development points to your local computer. If you later change the domain, download a fresh QR from the new URL before printing more materials.
+The footer’s **Share Grass Boxing** panel automatically creates a QR code for the site's deployed homepage and includes a **Download QR** link for a PNG you can use on flyers. Open the **live deployed site** and download it there; a QR downloaded from local development points to your local computer. If you later change the domain, download a fresh QR from the new URL before printing more materials.
 
 ## Netlify or Vercel
 
@@ -118,7 +118,7 @@ grass-boxing/
 │   ├── assets/images/       bundled editorial images
 │   ├── assets/clients/      real client photos you add
 │   ├── assets/gallery/      real training photos you add
-│   ├── components/          navigation, QR code, testimonials, gallery
+│   ├── components/          navigation, session planner, QR code, testimonials, gallery
 │   ├── config/siteConfig.js  main content and contact settings
 │   ├── data/                testimonial and gallery entries
 │   ├── styles/main.css       responsive visual system
